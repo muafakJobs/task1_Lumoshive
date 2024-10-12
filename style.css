@@ -1,0 +1,81 @@
+:root {
+    --navbarColor : #ccd5ae;
+    --footerColor : #e9edc9;
+    --mainColor : #fefae0;
+    --contactColor : #faedcd;
+    --borderColor : # d4a373;
+    --fontText : Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+    font-family: var(--fontText);
+}
+.grid {
+    display: grid;
+    grid-template-areas: "header header header" "aside sidebar main" "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.grid2 {
+    display: grid;
+    grid-template-areas: "sidebar" "main";
+    grid-template-columns: repeat(1, 1fr);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 50%;
+    border-radius: 1px solid black;
+    margin: auto;   
+}
+.container > h1 {
+    padding: 2%;
+}
+.container h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+.header {
+    grid-area: header;
+    height: 80px;
+    background-color: var(--navbarColor);
+    text-align: center;
+}
+.aside {
+    grid-area: aside;
+    height: 900px;
+    text-align: center;
+    font-family: var(--fontText);
+    background-color: var(--contactColor);
+    border: 3px solid #d4a373;
+    border-radius: 5%;
+}
+.aside > p {
+    font-family: var(--fontText);
+    border-bottom: #d4a373;
+}
+.sidebar {
+    grid-area: sidebar;
+    height: 400px;
+    text-align: center;
+    background-color: var(--mainColor);
+    font-family: var(--fontText);
+    border: 3px solid #d4a373;
+    border-radius: 5%;
+}
+.main {
+    grid-area: main;
+    height: 410px;
+    background-color: var(--mainColor);
+    text-align: center;
+    font-family: var(--fontText);
+    border: 3px solid #d4a373;
+    border-radius: 5%;
+}
+.footer {
+    grid-area: footer;
+    height: 50px;
+    background-color: var(--footerColor);
+    text-align: center;
+    font-family: var(--fontText);
+}
